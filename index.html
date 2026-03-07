@@ -1,0 +1,1079 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlowVault — The Next-Generation Sales & Marketing Funnel Platform</title>
+  <meta name="description" content="FlowVault is the modern alternative to ClickFunnels — built for high-growth businesses, creators, agencies, and entrepreneurs. One platform. Zero limits. Every channel.">
+  <meta name="keywords" content="FlowVault, sales funnel, marketing automation, ClickFunnels alternative, CRM, email marketing, landing page builder">
+  <link rel="canonical" href="https://flowvault.online">
+  <meta property="og:title" content="FlowVault — The Next-Generation Sales & Marketing Funnel Platform">
+  <meta property="og:description" content="The modern alternative to ClickFunnels — built for high-growth businesses, creators, agencies, and entrepreneurs.">
+  <meta property="og:url" content="https://flowvault.online">
+  <meta property="og:type" content="website">
+  <style>
+    :root {
+      --primary: #6C3CE1;
+      --primary-dark: #5A2DC5;
+      --primary-light: #8B5CF6;
+      --accent: #00D4AA;
+      --accent-dark: #00B894;
+      --dark: #0F0F1A;
+      --dark-surface: #1A1A2E;
+      --dark-card: #16213E;
+      --text: #E2E8F0;
+      --text-muted: #94A3B8;
+      --white: #FFFFFF;
+      --gradient: linear-gradient(135deg, var(--primary), var(--accent));
+      --gradient-dark: linear-gradient(135deg, #1A1A2E, #16213E);
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif;
+      background-color: var(--dark);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    /* Navigation */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(15, 15, 26, 0.95);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid rgba(108, 60, 225, 0.2);
+      padding: 1rem 0;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      font-size: 1.5rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+
+    .nav-links a {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: var(--white);
+    }
+
+    .nav-cta {
+      background: var(--gradient);
+      color: var(--white) !important;
+      padding: 0.6rem 1.5rem;
+      border-radius: 8px;
+      font-weight: 600 !important;
+      transition: transform 0.3s, box-shadow 0.3s !important;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(108, 60, 225, 0.4);
+    }
+
+    .mobile-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: var(--text);
+      font-size: 1.5rem;
+      cursor: pointer;
+    }
+
+    /* Hero Section */
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 8rem 2rem 4rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(ellipse at center, rgba(108, 60, 225, 0.15) 0%, transparent 60%);
+      animation: pulse 8s ease-in-out infinite alternate;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.5; }
+      100% { transform: scale(1.1); opacity: 1; }
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background: rgba(108, 60, 225, 0.15);
+      border: 1px solid rgba(108, 60, 225, 0.3);
+      padding: 0.5rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      color: var(--primary-light);
+      margin-bottom: 2rem;
+      font-weight: 500;
+    }
+
+    .hero h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero h1 .gradient-text {
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      color: var(--text-muted);
+      margin-bottom: 2.5rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .hero-buttons {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn-primary {
+      background: var(--gradient);
+      color: var(--white);
+      padding: 1rem 2.5rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 1.05rem;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 35px rgba(108, 60, 225, 0.5);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: var(--text);
+      padding: 1rem 2.5rem;
+      border-radius: 12px;
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 1.05rem;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      cursor: pointer;
+      transition: all 0.3s;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-secondary:hover {
+      border-color: var(--primary-light);
+      background: rgba(108, 60, 225, 0.1);
+    }
+
+    .hero-stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      margin-top: 4rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-value {
+      font-size: 1.8rem;
+      font-weight: 800;
+      background: var(--gradient);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Section Styles */
+    section {
+      padding: 6rem 2rem;
+    }
+
+    .section-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 4rem;
+    }
+
+    .section-header h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+      letter-spacing: -0.02em;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+    }
+
+    /* Comparison Section */
+    .comparison {
+      background: var(--dark-surface);
+    }
+
+    .comparison-table {
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 1px solid rgba(108, 60, 225, 0.2);
+    }
+
+    .comparison-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      padding: 1rem 1.5rem;
+      text-align: left;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .comparison-table thead {
+      background: rgba(108, 60, 225, 0.15);
+    }
+
+    .comparison-table th {
+      font-weight: 700;
+      font-size: 0.9rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--primary-light);
+    }
+
+    .comparison-table td {
+      font-size: 0.95rem;
+    }
+
+    .comparison-table td:first-child {
+      font-weight: 600;
+    }
+
+    .comparison-table tbody tr:hover {
+      background: rgba(108, 60, 225, 0.05);
+    }
+
+    .check {
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .cross {
+      color: #EF4444;
+    }
+
+    /* Features Grid */
+    .features-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+    }
+
+    .feature-card {
+      background: var(--dark-card);
+      border: 1px solid rgba(108, 60, 225, 0.1);
+      border-radius: 16px;
+      padding: 2rem;
+      transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(108, 60, 225, 0.3);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: var(--gradient);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .feature-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    /* Pricing Section */
+    .pricing {
+      background: var(--dark-surface);
+    }
+
+    .pricing-grid {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .pricing-card {
+      background: var(--dark-card);
+      border: 1px solid rgba(108, 60, 225, 0.1);
+      border-radius: 20px;
+      padding: 2.5rem;
+      text-align: center;
+      transition: transform 0.3s, box-shadow 0.3s;
+      position: relative;
+    }
+
+    .pricing-card.featured {
+      border-color: var(--primary);
+      transform: scale(1.05);
+      box-shadow: 0 20px 60px rgba(108, 60, 225, 0.3);
+    }
+
+    .pricing-card.featured::before {
+      content: 'Most Popular';
+      position: absolute;
+      top: -14px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: var(--gradient);
+      color: var(--white);
+      padding: 0.35rem 1.5rem;
+      border-radius: 50px;
+      font-size: 0.8rem;
+      font-weight: 700;
+    }
+
+    .pricing-card:hover {
+      transform: translateY(-5px);
+    }
+
+    .pricing-card.featured:hover {
+      transform: scale(1.05) translateY(-5px);
+    }
+
+    .pricing-card h3 {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 0.5rem;
+    }
+
+    .pricing-card .price {
+      font-size: 3rem;
+      font-weight: 800;
+      margin: 1rem 0;
+    }
+
+    .pricing-card .price span {
+      font-size: 1rem;
+      font-weight: 400;
+      color: var(--text-muted);
+    }
+
+    .pricing-card .best-for {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .pricing-features {
+      list-style: none;
+      text-align: left;
+      margin-bottom: 2rem;
+    }
+
+    .pricing-features li {
+      padding: 0.5rem 0;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .pricing-features li::before {
+      content: '\2713';
+      color: var(--accent);
+      font-weight: bold;
+    }
+
+    .pricing-btn {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      border-radius: 12px;
+      font-weight: 700;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: all 0.3s;
+      cursor: pointer;
+    }
+
+    .pricing-btn-primary {
+      background: var(--gradient);
+      color: var(--white);
+      border: none;
+    }
+
+    .pricing-btn-primary:hover {
+      box-shadow: 0 8px 25px rgba(108, 60, 225, 0.4);
+      transform: translateY(-2px);
+    }
+
+    .pricing-btn-secondary {
+      background: transparent;
+      color: var(--text);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    .pricing-btn-secondary:hover {
+      border-color: var(--primary-light);
+      background: rgba(108, 60, 225, 0.1);
+    }
+
+    .pricing-note {
+      text-align: center;
+      margin-top: 2rem;
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* Audience Section */
+    .audience-grid {
+      max-width: 1000px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1.5rem;
+    }
+
+    .audience-card {
+      background: var(--dark-card);
+      border: 1px solid rgba(108, 60, 225, 0.1);
+      border-radius: 12px;
+      padding: 1.5rem;
+      display: flex;
+      align-items: start;
+      gap: 1rem;
+      transition: border-color 0.3s;
+    }
+
+    .audience-card:hover {
+      border-color: rgba(108, 60, 225, 0.3);
+    }
+
+    .audience-icon {
+      font-size: 1.5rem;
+      flex-shrink: 0;
+    }
+
+    .audience-card h4 {
+      font-size: 1rem;
+      font-weight: 700;
+      margin-bottom: 0.25rem;
+    }
+
+    .audience-card p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+    }
+
+    /* CTA Section */
+    .cta-section {
+      text-align: center;
+      padding: 8rem 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-section::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: radial-gradient(ellipse at center, rgba(108, 60, 225, 0.2) 0%, transparent 70%);
+    }
+
+    .cta-content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      font-weight: 800;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      color: var(--text-muted);
+      font-size: 1.1rem;
+      margin-bottom: 2rem;
+      max-width: 500px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    /* Footer */
+    footer {
+      background: var(--dark-surface);
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      padding: 4rem 2rem 2rem;
+    }
+
+    .footer-grid {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 2fr 1fr 1fr 1fr;
+      gap: 3rem;
+      margin-bottom: 3rem;
+    }
+
+    .footer-brand .logo {
+      font-size: 1.3rem;
+      display: inline-block;
+      margin-bottom: 1rem;
+    }
+
+    .footer-brand p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      line-height: 1.7;
+    }
+
+    .footer-col h4 {
+      font-weight: 700;
+      margin-bottom: 1rem;
+      font-size: 0.95rem;
+    }
+
+    .footer-col a {
+      display: block;
+      color: var(--text-muted);
+      text-decoration: none;
+      font-size: 0.9rem;
+      padding: 0.3rem 0;
+      transition: color 0.3s;
+    }
+
+    .footer-col a:hover {
+      color: var(--white);
+    }
+
+    .footer-bottom {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .footer-bottom a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    .footer-bottom a:hover {
+      color: var(--white);
+    }
+
+    /* Responsive */
+    @media (max-width: 968px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: rgba(15, 15, 26, 0.98);
+        flex-direction: column;
+        padding: 2rem;
+        gap: 1rem;
+        border-bottom: 1px solid rgba(108, 60, 225, 0.2);
+      }
+
+      .nav-links.active {
+        display: flex;
+      }
+
+      .mobile-toggle {
+        display: block;
+      }
+
+      .hero h1 {
+        font-size: 2.5rem;
+      }
+
+      .hero-stats {
+        flex-direction: column;
+        gap: 1.5rem;
+      }
+
+      .features-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pricing-grid {
+        grid-template-columns: 1fr;
+        max-width: 450px;
+      }
+
+      .pricing-card.featured {
+        transform: none;
+      }
+
+      .pricing-card.featured:hover {
+        transform: translateY(-5px);
+      }
+
+      .audience-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .comparison-table {
+        overflow-x: auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 2rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+
+      .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .section-header h2 {
+        font-size: 2rem;
+      }
+
+      .cta-section h2 {
+        font-size: 2rem;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="#" class="logo">FlowVault</a>
+      <button class="mobile-toggle" onclick="document.querySelector('.nav-links').classList.toggle('active')" aria-label="Toggle navigation">&#9776;</button>
+      <ul class="nav-links">
+        <li><a href="#features">Features</a></li>
+        <li><a href="#comparison">Compare</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#audience">Who It's For</a></li>
+        <li><a href="#cta" class="nav-cta">Start Free Trial</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Hero -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-badge">The Modern Alternative to ClickFunnels</div>
+      <h1>Your Entire Growth Engine,<br><span class="gradient-text">One Platform</span></h1>
+      <p>FlowVault is the next-generation all-in-one sales and marketing ecosystem built for high-growth businesses, creators, agencies, and entrepreneurs.</p>
+      <div class="hero-buttons">
+        <a href="#cta" class="btn-primary">Start 14-Day Free Trial &rarr;</a>
+        <a href="#features" class="btn-secondary">See Features</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat">
+          <div class="stat-value">1.4s</div>
+          <div class="stat-label">Avg. Page Load</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">200+</div>
+          <div class="stat-label">Templates</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">0</div>
+          <div class="stat-label">Per-Contact Fees</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Comparison -->
+  <section class="comparison" id="comparison">
+    <div class="section-header">
+      <h2>FlowVault vs ClickFunnels</h2>
+      <p>See why businesses are switching to FlowVault for faster performance, deeper integration, and true scalability.</p>
+    </div>
+    <div class="comparison-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Feature</th>
+            <th>ClickFunnels 2.0</th>
+            <th>FlowVault</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>AI Personalization</td>
+            <td class="cross">Basic only</td>
+            <td class="check">&#10003; Real-time AI Engine</td>
+          </tr>
+          <tr>
+            <td>Page Load Speed</td>
+            <td>3.8s avg</td>
+            <td class="check">&#10003; 1.4s avg</td>
+          </tr>
+          <tr>
+            <td>Native Omnichannel</td>
+            <td class="cross">Limited</td>
+            <td class="check">&#10003; Email, SMS, WhatsApp</td>
+          </tr>
+          <tr>
+            <td>Enterprise CRM</td>
+            <td class="cross">Limited</td>
+            <td class="check">&#10003; Unlimited contacts</td>
+          </tr>
+          <tr>
+            <td>Courses &amp; Community</td>
+            <td class="cross">Basic only</td>
+            <td class="check">&#10003; Native platform</td>
+          </tr>
+          <tr>
+            <td>White-Label Agency</td>
+            <td class="cross">&#10007;</td>
+            <td class="check">&#10003; Full white-label</td>
+          </tr>
+          <tr>
+            <td>Pricing Model</td>
+            <td>Punishes growth</td>
+            <td class="check">&#10003; Flat pricing</td>
+          </tr>
+          <tr>
+            <td>Unified Analytics</td>
+            <td>Siloed</td>
+            <td class="check">&#10003; Single dashboard</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Features -->
+  <section id="features">
+    <div class="section-header">
+      <h2>Everything You Need to Grow</h2>
+      <p>One platform. Zero limits. Every channel.</p>
+    </div>
+    <div class="features-grid">
+      <div class="feature-card">
+        <div class="feature-icon">&#9881;</div>
+        <h3>Funnel &amp; Page Builder</h3>
+        <p>Drag-and-drop editor with 200+ conversion-optimized templates. One-click upsells, downsells, order bumps, and abandoned cart recovery built in.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#9733;</div>
+        <h3>AI Personalization Engine</h3>
+        <p>Dynamic headlines, CTAs, and offers tailored in real-time based on visitor behavior, location, traffic source, and purchase history.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#9889;</div>
+        <h3>Omnichannel Automation</h3>
+        <p>Native behavioral workflows spanning email, SMS, voicemail drops, WhatsApp, and calendar — all in one visual builder.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128202;</div>
+        <h3>Enterprise CRM</h3>
+        <p>Unlimited contacts, advanced pipelines, 360-degree customer views, and full lifecycle tracking with no per-contact fees.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#127891;</div>
+        <h3>Content Ecosystem</h3>
+        <p>Native podcasts, video hosting, drip courses, memberships, communities, and live events — all under one roof.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128200;</div>
+        <h3>Unified Analytics &amp; ROI</h3>
+        <p>Advanced A/B testing, smart traffic routing, and attribution across every touchpoint in one real-time dashboard.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128179;</div>
+        <h3>Multi-Gateway Payments</h3>
+        <p>Stripe, PayPal, and more. No transaction limits. One-click upsells and subscription billing included.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#127937;</div>
+        <h3>White-Label Ready</h3>
+        <p>Full white-label for agencies and resellers. Your logo, your domain, your price — complete brand control.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">&#128274;</div>
+        <h3>Enterprise Security</h3>
+        <p>SOC 2 compliant infrastructure with encrypted data, role-based access, and audit logging for peace of mind.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Pricing -->
+  <section class="pricing" id="pricing">
+    <div class="section-header">
+      <h2>Simple, Flat Pricing</h2>
+      <p>No per-contact fees. No hidden costs. Scale without penalty.</p>
+    </div>
+    <div class="pricing-grid">
+      <div class="pricing-card">
+        <h3>Starter</h3>
+        <div class="best-for">Solo creators &amp; beginners</div>
+        <div class="price">$97<span>/month</span></div>
+        <ul class="pricing-features">
+          <li>Funnel &amp; page builder</li>
+          <li>Email automation</li>
+          <li>Basic CRM</li>
+          <li>Payment integration</li>
+          <li>Community support</li>
+        </ul>
+        <a href="#cta" class="pricing-btn pricing-btn-secondary">Start Free Trial</a>
+      </div>
+      <div class="pricing-card featured">
+        <h3>Pro</h3>
+        <div class="best-for">Growing businesses</div>
+        <div class="price">$197<span>/month</span></div>
+        <ul class="pricing-features">
+          <li>Everything in Starter</li>
+          <li>AI personalization engine</li>
+          <li>SMS &amp; WhatsApp automation</li>
+          <li>Advanced CRM pipelines</li>
+          <li>Courses &amp; memberships</li>
+          <li>Priority support</li>
+        </ul>
+        <a href="#cta" class="pricing-btn pricing-btn-primary">Start Free Trial</a>
+      </div>
+      <div class="pricing-card">
+        <h3>Agency</h3>
+        <div class="best-for">Agencies &amp; resellers</div>
+        <div class="price">$397<span>/month</span></div>
+        <ul class="pricing-features">
+          <li>Everything in Pro</li>
+          <li>Full white-label</li>
+          <li>Unlimited sub-accounts</li>
+          <li>Custom domain branding</li>
+          <li>API access</li>
+          <li>Dedicated account manager</li>
+        </ul>
+        <a href="#cta" class="pricing-btn pricing-btn-secondary">Start Free Trial</a>
+      </div>
+    </div>
+    <p class="pricing-note">All plans include a 14-day free trial. No credit card required.</p>
+  </section>
+
+  <!-- Who It's For -->
+  <section id="audience">
+    <div class="section-header">
+      <h2>Who Is FlowVault For?</h2>
+      <p>Built for anyone serious about growth.</p>
+    </div>
+    <div class="audience-grid">
+      <div class="audience-card">
+        <div class="audience-icon">&#127891;</div>
+        <div>
+          <h4>Online Course Creators</h4>
+          <p>Sell, host, and deliver courses in one place.</p>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">&#128230;</div>
+        <div>
+          <h4>Digital Product Sellers</h4>
+          <p>Funnels + payments + delivery unified.</p>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">&#128188;</div>
+        <div>
+          <h4>Coaches &amp; Consultants</h4>
+          <p>CRM + booking + automation in a single workflow.</p>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">&#127968;</div>
+        <div>
+          <h4>Agencies</h4>
+          <p>White-label and resell to clients under your brand.</p>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">&#128722;</div>
+        <div>
+          <h4>E-Commerce Brands</h4>
+          <p>Funnels + email + abandoned cart recovery.</p>
+        </div>
+      </div>
+      <div class="audience-card">
+        <div class="audience-icon">&#128640;</div>
+        <div>
+          <h4>Entrepreneurs</h4>
+          <p>Replace your entire toolstack for less.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-section" id="cta">
+    <div class="cta-content">
+      <h2>Ready to Unlock Your Growth?</h2>
+      <p>Start your 14-day free trial today. No credit card required. Cancel anytime.</p>
+      <a href="mailto:hello@flowvault.online" class="btn-primary">Get Started Free &rarr;</a>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <span class="logo">FlowVault</span>
+        <p>Your entire growth engine, locked in, always flowing. Built for creators, agencies, and entrepreneurs who are done duct-taping their stack.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Product</h4>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#comparison">Compare</a>
+      </div>
+      <div class="footer-col">
+        <h4>Company</h4>
+        <a href="mailto:hello@flowvault.online">Contact</a>
+        <a href="mailto:hello@flowvault.online">Investors</a>
+        <a href="mailto:hello@flowvault.online">Agency Partners</a>
+      </div>
+      <div class="footer-col">
+        <h4>Connect</h4>
+        <a href="mailto:hello@flowvault.online">hello@flowvault.online</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; 2026 FlowVault. All rights reserved.</span>
+      <span>Licensed under <a href="https://opensource.org/licenses/MIT">MIT</a></span>
+    </div>
+  </footer>
+
+</body>
+</html>
